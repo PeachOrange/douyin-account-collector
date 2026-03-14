@@ -11,9 +11,9 @@ import aiohttp
 from playwright.async_api import async_playwright
 
 BASE = "https://www.douyin.com"
-DEFAULT_PROFILE_URL = "https://www.douyin.com/user/MS4wLjABAAAABw7_0qWoF5p8VoB0Vky_QMq0uJdcmeGfj4bzAzg4TvM"
-DEFAULT_EXPECTED_AUTHOR = "阿昆说牙材"
-DEFAULT_EXPECTED_SECUID = "MS4wLjABAAAABw7_0qWoF5p8VoB0Vky_QMq0uJdcmeGfj4bzAzg4TvM"
+DEFAULT_PROFILE_URL = "https://www.douyin.com/user/YOUR_SECUID"
+DEFAULT_EXPECTED_AUTHOR = "TARGET_AUTHOR_NAME"
+DEFAULT_EXPECTED_SECUID = "YOUR_SECUID"
 DEFAULT_OUTDIR = "/root/.openclaw/workspace/data/exports/douyin-batch"
 DEFAULT_METADIR = "/root/.openclaw/workspace/data/exports/douyin-batch-meta"
 DEFAULT_CDP = "http://127.0.0.1:9222"
@@ -392,6 +392,8 @@ def apply_config(args):
     CDP = args.cdp or cfg.get('cdp') or DEFAULT_CDP
     RESULT_PATH = os.path.join(METADIR, 'last-run.json')
     DB_PATH = os.path.join(METADIR, 'douyin_batch.db')
+    if 'YOUR_SECUID' in PROFILE_URL or EXPECTED_AUTHOR == 'TARGET_AUTHOR_NAME' or EXPECTED_SECUID == 'YOUR_SECUID':
+        raise SystemExit('Please provide real values for profile_url, expected_author, and expected_secuid via --config or CLI args.')
 
 
 def parse_args():

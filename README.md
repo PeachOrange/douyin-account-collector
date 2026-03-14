@@ -76,9 +76,9 @@ Or override directly:
 
 ```bash
 python scripts/douyin-batch-download-cdp.py \
-  --profile-url "https://www.douyin.com/user/SECUID" \
-  --expected-author "阿昆说牙材" \
-  --expected-secuid "MS4wLjABAAAAB..." \
+  --profile-url "https://www.douyin.com/user/YOUR_SECUID" \
+  --expected-author "TARGET_AUTHOR_NAME" \
+  --expected-secuid "YOUR_SECUID" \
   --cdp "http://127.0.0.1:9222"
 ```
 

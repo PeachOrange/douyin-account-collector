@@ -1,7 +1,7 @@
 {
-  "profile_url": "https://www.douyin.com/user/MS4wLjABAAAABw7_0qWoF5p8VoB0Vky_QMq0uJdcmeGfj4bzAzg4TvM",
-  "expected_author": "阿昆说牙材",
-  "expected_secuid": "MS4wLjABAAAABw7_0qWoF5p8VoB0Vky_QMq0uJdcmeGfj4bzAzg4TvM",
+  "profile_url": "https://www.douyin.com/user/YOUR_SECUID",
+  "expected_author": "TARGET_AUTHOR_NAME",
+  "expected_secuid": "YOUR_SECUID",
   "output_dir": "/root/.openclaw/workspace/data/exports/douyin-batch",
   "meta_dir": "/root/.openclaw/workspace/data/exports/douyin-batch-meta",
   "cdp": "http://127.0.0.1:9222"
